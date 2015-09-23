@@ -1,0 +1,162 @@
+@charset "utf-8";
+@import "compass";
+@import "extension";
+@import "default";
+@import "gallery";
+$menu-sprite-dimensions:true;
+@import "menu/*.png";
+@include all-menu-sprites;
+
+
+
+
+
+
+//---------------------------------------------
+//基本設定
+//---------------------------------------------
+
+html{
+	font-size:6.25%;
+}
+
+body{
+ @include default_body;
+ background: url(../images/bg.png) left top repeat;
+ @include font_size(16);
+}
+
+
+
+
+//---------------------------------------------
+//ヘッダーエリア
+//---------------------------------------------
+
+.headerArea{
+	border-top: solid 3px $l_clr;
+
+	.headerContents{
+		width: $mW;
+		margin: 0 auto;
+
+		.logo{
+			margin-top: 10px;
+		}
+
+		.navArea{
+			@include p_abso(-10px,190px);
+			
+
+			ul li{
+				float: left;
+				margin: 0;
+				padding: 0;
+				border: none;
+				background: none;
+				text-indent: 100%;
+				white-space: nowrap;
+				overflow: hidden;
+				
+				a{
+					display:block;
+				}
+
+			}
+		}
+	}
+}
+
+
+//---------------------------------------------
+//コンテンツエリア
+//---------------------------------------------
+
+.slideArea{
+  height: 340px;
+  background: url(../images/bg_main.png) left top repeat;
+  box-shadow:rgba(120, 97, 59, 0.380392) 0px 0px 8px 2px inset;
+}
+
+
+.background{
+
+	.wrapper{
+		width: $mW;
+		margin: 30px auto 50px auto;
+
+		.column1{
+			float: left;
+			width: $c1W;
+			margin-right: 30px;
+		}
+
+		.column2{
+			float: left;
+			width: $c2W;
+		}
+
+	}
+	
+	.mainArea{
+		width: $mW;
+		margin: 40px auto 70px auto;
+
+		.column1{
+			float: left;
+			width:300px;
+		}
+
+		.column2{
+			float: right;
+			width: $c2W;
+		}
+	}
+}
+
+//---------------------------------------------
+//フッターーエリア
+//---------------------------------------------
+
+footer{
+	.footerArea{
+		border-top: solid 3px #170602;
+
+		.fMenu{
+			width: $mW;
+			margin: 0 auto;
+			text-align: center;
+
+
+			ul{
+				margin: 30px 0;
+				text-align: center;
+
+				li{
+					display: inline-block;
+					margin: 0;
+					text-align: center;
+
+					a{
+						@include linkfont;
+
+						&:hover{
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+
+			small{
+				@include font_size(12);
+			}
+		}
+	}
+}
+
+
+
+
+
+
+

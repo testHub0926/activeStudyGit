@@ -1,0 +1,144 @@
+@charset "utf-8";
+@import "compass";
+@import "extension";
+@import "default";
+$slide: sprite-map("slide/*.png");
+
+
+/* :::::: gallery ::::::
+ * #gallery内の指定
+ */
+#gallery {
+  position: relative;
+  width: $mW;
+  height: 300px;
+  margin: 0 auto;
+  padding-top: 40px;
+  background: url(../images/bg_slide.png)  left center repeat-x;
+
+  .slideFrame {
+    height: 260px;
+    overflow: hidden;
+    margin-bottom: 6px;
+    
+    ul {
+      position: absolute;
+      top: 0;
+      left: 70px;
+      width: 2520px;
+      margin: 0;
+
+      li {
+        float: left;
+        width: 820px;
+        margin-right: 20px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          background: none;
+        }
+      }
+    }
+  }
+
+  /* gallery list button */
+  .nav {
+    width: 62px;
+    margin: 0 auto;
+    padding: 0;
+
+    li {
+      float: left;
+      margin-right: 16px;
+      background-position: -260px 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        display: block;
+        @include sprite-dimensions($slide,off);
+        background-position: sprite-position($slide,off);
+
+        &:hover {
+          @include sprite-dimensions($slide,on);
+          background-position: sprite-position($slide,on);
+        }
+      }
+    }
+
+   
+  }
+
+  p {
+    position: absolute;
+    top: 0;
+    margin: 0;
+    width: 70px;
+    height: 300px;
+    cursor: pointer;
+
+    a {
+      display: block;
+      width: 30px;
+      height: 30px;
+      margin: 150px 0 0 20px;
+      background-position: -230px 0;
+    }
+  }
+
+  p,a{
+    background: $slide;
+  }
+
+
+  .prev {
+   top:20px;
+   left: 0;
+    @include sprite-dimensions($slide,item_l);
+    background-position: sprite-position($slide,item_l);
+
+    a{
+      display: block;
+      @include sprite-dimensions($slide,arrow_l);
+      background-position: sprite-position($slide,arrow_l);
+
+      &:hover{
+        @include sprite-dimensions($slide,arrow_l_h);
+        background-position: sprite-position($slide,arrow_l_h);
+
+      }
+    }
+  }
+
+
+  .next {
+    top:20px;
+    right: 0;
+    @include sprite-dimensions($slide,item_r);
+    background-position: sprite-position($slide,item_r);
+
+    a {
+      display: block;
+      @include sprite-dimensions($slide,arrow_r);
+      background-position: sprite-position($slide,arrow_r);
+
+      &:hover{
+        @include sprite-dimensions($slide,arrow_r_h);
+        background-position: sprite-position($slide,arrow_r_h);
+
+      }
+    }
+  }
+}
+
+
+ 
+
+ 
+
+ 

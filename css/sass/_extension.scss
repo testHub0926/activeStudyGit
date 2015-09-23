@@ -1,0 +1,78 @@
+@charset "utf-8";
+@import "compass";
+
+
+//---------------------------------------------
+//アニメーション transition
+//---------------------------------------------
+
+@mixin transition($property, $time, $methd){
+	@each $prefix in -webkit-, -moz-, -o-, null{
+		#{$prefix}transition: $property $time $methd;
+	}
+}
+
+
+//---------------------------------------------
+//角丸
+//---------------------------------------------
+
+@mixin radius($radius:3){
+	border-radius: #{$radius}px;
+}
+
+
+//---------------------------------------------
+//アニメーション回転 transition
+//---------------------------------------------
+@mixin rotatey_deg($deg){
+	@each $prefix in -webkit-, -moz-, null{
+		#{$prefix}transform:rotateY($deg);
+	}
+}
+
+
+
+
+
+//---------------------------------------------
+//clearfix
+//---------------------------------------------
+
+@mixin cf{
+ zoom:1;
+ 
+ &:before, 
+ &:after{
+  content:"";
+	display: table;
+ }
+ 
+ &:after{
+  clear:both;
+ }
+}
+
+
+@mixin clear{
+ clear:both;
+}
+
+
+//clearfixプレスホルダーセレクタ
+%clearfix{
+	@include cf;
+}
+
+
+//---------------------------------------------
+//絶対配置
+//---------------------------------------------
+
+//position:absolute;
+@mixin p_abso($top: auto, $left: auto){
+	position:absolute;
+	top:$top;
+	left:$left;
+}
+

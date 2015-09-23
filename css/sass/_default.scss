@@ -1,0 +1,90 @@
+@charset "utf-8";
+@import "compass";
+
+
+//---------------------------------------------
+//基本設定
+//---------------------------------------------
+
+//フォントカラー
+$n_clr:#333;
+
+//ホバーカラー
+$h_clr:#fdce29;
+
+//ラインからー
+$l_clr:#883f2c;
+
+
+//positionrelative
+.base{
+	position: relative;
+}
+
+//crleafix
+.cf{
+	@include cf;
+}
+
+//clearboth
+.clear{
+	@include clear;
+}
+
+ul,ol{
+	list-style: none;
+}
+
+
+
+//---------------------------------------------
+//bodyコンテンツ
+//---------------------------------------------
+
+//body
+@mixin default_body{
+	margin:0;
+	padding:0;
+	font-family:'ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN','Meiryo', 'メイリオ','MSPゴシック', sans-serif;
+	color:$n_clr;
+	line-height:1.8;
+	 -webkit-text-size-adjust: 100%;
+}
+
+//フォントサイズ pxとrem
+@mixin font_size($size){
+ font-size: $size+px;
+ font-size: ($size/1)+rem;
+}
+
+
+//---------------------------------------------
+//mainコンテンツ
+//---------------------------------------------
+
+
+//font明朝
+$mincho:'ヒラギノ明朝 Pro','Hiragino Mincho Pro','Meiryo', 'メイリオ','ＭＳ Ｐ明朝', sans-serif;
+
+//mainの幅
+$mW: 960px;
+
+//column1
+$c2W: 690px;
+
+//column2 270px
+$c1W:  $mW - $c2W - 30 ;
+
+
+@mixin linkfont{
+	text-decoration: none;
+	color:#333;
+	@include font_size(13);
+	font-weight: bold;
+}
+
+
+
+
+
+

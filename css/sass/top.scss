@@ -1,0 +1,145 @@
+@charset "utf-8";
+@import "compass";
+@import "extension";
+@import "default";
+$submenu-sprite-dimensions:true;
+@import "top/submenu/*.png";
+@include all-submenu-sprites;
+
+
+.background .wrapper .column1{
+
+	p{
+		line-height: 0;
+	}
+
+	.subnavArea{
+		background: url(../images/bg_main.png)left top repeat;
+
+		.accordion{
+			margin-bottom: 20px;
+			padding: 10px 0;
+
+			.acHead{
+				width: 220px;
+				margin: 0 auto 5px auto;
+
+
+				p{
+					text-indent: 100%;
+					white-space: nowrap;
+					overflow: hidden;
+
+					a{
+						display:block;
+						height: 50px;
+					}
+				}
+			}
+
+
+			.list{
+				@extend .acHead;
+				margin: 10px 0 10px 20px; 
+
+
+				li{
+					padding-left:26px;
+					background: url(../images/top/icn_fish.png) left 8px no-repeat;
+
+					a{
+						@include linkfont;
+
+						&:hover{
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.adjust{
+		position: relative;
+		top:0;
+		left:-18px;
+		margin-bottom: 5px;
+	}
+
+	.adjust + .banner{
+		margin-bottom: 20px;
+	}
+
+	.banner + .sns{
+		margin-bottom: 10px;
+	}
+
+}
+
+.background .wrapper .column2{
+
+	.introArea{
+		height: 302px;
+		margin-bottom: 30px;
+		background: url(../images/top/bg_intro.png) left top no-repeat;
+
+		h1{
+			margin: 0 0 5px 264px;
+			padding-top: 20px;
+		}
+
+		p{
+			@extend h1;
+			margin-bottom: 0;
+			padding: 0;
+			@include font_size(13);
+			line-height: 1.6;
+		}
+
+		.access{
+			@include p_abso(185px,570px);
+		}
+
+	}
+
+	.newsArea{
+		padding: 20px;
+		background: #fff;
+
+		h1{
+			margin-bottom: 10px;
+		}
+
+		.post{
+			margin-bottom: 10px;
+			padding-bottom: 10px;
+			border-bottom: 1px dashed #271001;
+
+			.time{
+				float: left;
+				width: 80px;
+				padding-right: 25px;
+				color:#8e704e;
+				@include font_size(12);
+				font-weight: bold;
+			}
+
+			.entry{
+				float: left;
+				width: 400px;
+				@include font_size(12);
+
+				a{
+					@include linkfont;
+					@include font_size(12);
+
+					&:hover{
+							text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
+
+

@@ -1,0 +1,177 @@
+.base {
+  position: relative;
+}
+
+.cf {
+  zoom: 1;
+}
+.cf:before, .cf:after {
+  content: "";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+
+.clear {
+  clear: both;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.submenu-sprite, .submenu-subicon01, .submenu-subicon02, .submenu-subicon03, .submenu-subicon04 {
+  background-image: url('../images/top/submenu.png');
+  background-repeat: no-repeat;
+}
+
+.submenu-subicon01 {
+  background-position: 0 0;
+  height: 50px;
+  width: 220px;
+}
+.submenu-subicon01:hover, .submenu-subicon01.subicon01-hover {
+  background-position: 0 -50px;
+}
+
+.submenu-subicon02 {
+  background-position: 0 -100px;
+  height: 50px;
+  width: 220px;
+}
+.submenu-subicon02:hover, .submenu-subicon02.subicon02-hover {
+  background-position: 0 -150px;
+}
+
+.submenu-subicon03 {
+  background-position: 0 -200px;
+  height: 50px;
+  width: 220px;
+}
+.submenu-subicon03:hover, .submenu-subicon03.subicon03-hover {
+  background-position: 0 -250px;
+}
+
+.submenu-subicon04 {
+  background-position: 0 -300px;
+  height: 50px;
+  width: 220px;
+}
+.submenu-subicon04:hover, .submenu-subicon04.subicon04-hover {
+  background-position: 0 -350px;
+}
+
+.background .wrapper .column1 p {
+  line-height: 0;
+}
+.background .wrapper .column1 .subnavArea {
+  background: url(../images/bg_main.png) left top repeat;
+}
+.background .wrapper .column1 .subnavArea .accordion {
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+.background .wrapper .column1 .subnavArea .accordion .acHead, .background .wrapper .column1 .subnavArea .accordion .list {
+  width: 220px;
+  margin: 0 auto 5px auto;
+}
+.background .wrapper .column1 .subnavArea .accordion .acHead p, .background .wrapper .column1 .subnavArea .accordion .list p {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.background .wrapper .column1 .subnavArea .accordion .acHead p a, .background .wrapper .column1 .subnavArea .accordion .list p a {
+  display: block;
+  height: 50px;
+}
+.background .wrapper .column1 .subnavArea .accordion .list {
+  margin: 10px 0 10px 20px;
+}
+.background .wrapper .column1 .subnavArea .accordion .list li {
+  padding-left: 26px;
+  background: url(../images/top/icn_fish.png) left 8px no-repeat;
+}
+.background .wrapper .column1 .subnavArea .accordion .list li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 13px;
+  font-size: 13rem;
+  font-weight: bold;
+}
+.background .wrapper .column1 .subnavArea .accordion .list li a:hover {
+  text-decoration: underline;
+}
+.background .wrapper .column1 .adjust {
+  position: relative;
+  top: 0;
+  left: -18px;
+  margin-bottom: 5px;
+}
+.background .wrapper .column1 .adjust + .banner {
+  margin-bottom: 20px;
+}
+.background .wrapper .column1 .banner + .sns {
+  margin-bottom: 10px;
+}
+
+.background .wrapper .column2 .introArea {
+  height: 302px;
+  margin-bottom: 30px;
+  background: url(../images/top/bg_intro.png) left top no-repeat;
+}
+.background .wrapper .column2 .introArea h1, .background .wrapper .column2 .introArea p {
+  margin: 0 0 5px 264px;
+  padding-top: 20px;
+}
+.background .wrapper .column2 .introArea p {
+  margin-bottom: 0;
+  padding: 0;
+  font-size: 13px;
+  font-size: 13rem;
+  line-height: 1.6;
+}
+.background .wrapper .column2 .introArea .access {
+  position: absolute;
+  top: 185px;
+  left: 570px;
+}
+.background .wrapper .column2 .newsArea {
+  padding: 20px;
+  background: #fff;
+}
+.background .wrapper .column2 .newsArea h1, .background .wrapper .column2 .newsArea .introArea p, .background .wrapper .column2 .introArea .newsArea p {
+  margin-bottom: 10px;
+}
+.background .wrapper .column2 .newsArea .post {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #271001;
+}
+.background .wrapper .column2 .newsArea .post .time {
+  float: left;
+  width: 80px;
+  padding-right: 25px;
+  color: #8e704e;
+  font-size: 12px;
+  font-size: 12rem;
+  font-weight: bold;
+}
+.background .wrapper .column2 .newsArea .post .entry {
+  float: left;
+  width: 400px;
+  font-size: 12px;
+  font-size: 12rem;
+}
+.background .wrapper .column2 .newsArea .post .entry a {
+  text-decoration: none;
+  color: #333;
+  font-size: 13px;
+  font-size: 13rem;
+  font-weight: bold;
+  font-size: 12px;
+  font-size: 12rem;
+}
+.background .wrapper .column2 .newsArea .post .entry a:hover {
+  text-decoration: underline;
+}
